@@ -1,0 +1,20 @@
+{
+  "plugins": ["jasmine"],
+  "extends": ["angular", "eslint:recommended", "plugin:jasmine/recommended"],
+  "rules": {
+    "quotes": [ 2, "single"],
+    "strict": [2, "global"],
+    "semi": [2, "always"],
+    "angular/on-watch": 1,
+    "jasmine/no-spec-dupes": [2, "branch"],
+    "jasmine/no-suite-dupes": [2, "branch"]
+  },
+  "env": {
+    "jasmine": true
+  },
+  "globals": {
+    "angular": false,
+    "module": false,
+    "inject": false
+  }
+}

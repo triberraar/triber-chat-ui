@@ -1,0 +1,9 @@
+<div class="col-md-3">
+    <div class="row">
+        <div class="col-md-12 chat-user"
+             ng-repeat="user in connectedUserCtrl.users()">
+            <a ng-click="connectedUserCtrl.clickedUser(user)"><i class="fa fa-user fa-2x"></i> {{user.username}} <span ng-if="connectedUserCtrl.getNumberOfUnreadMessagesForUser(user)>0" class="badge">Messages: {{connectedUserCtrl.getNumberOfUnreadMessagesForUser(user)}}</span></a>
+
+        </div>
+    </div>
+</div>

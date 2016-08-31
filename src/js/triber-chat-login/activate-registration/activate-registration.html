@@ -1,0 +1,19 @@
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+	<div>
+		<div>
+			<h1 class="logo-name">TC</h1>
+		</div>
+		<h3>Activate registration</h3>
+		<p>Activate your registration.</p>
+		<form class="m-t" role="form" name="activateRegistrationCtrl.activateRegistrationForm" novalidate ng-submit="activateRegistrationCtrl.activateRegistration()">
+			<div class="form-group" ng-class="{ 'has-error' : activateRegistrationCtrl.activateRegistrationForm.password.$invalid  && ( activateRegistrationCtrl.activateRegistrationForm.password.$touched || activateRegistrationCtrl.submitAttempted ) }">
+				<input type="password" name="password" class="form-control" placeholder="Password" required ng-model="activateRegistrationCtrl.password" ng-minlength="6" ng-maxlength="256">
+				<div class="help-block" ng-messages="activateRegistrationCtrl.activateRegistrationForm.password.$error" ng-if="activateRegistrationCtrl.activateRegistrationForm.password.$touched || activateRegistrationCtrl.submitAttempted">
+					<div ng-messages-include="js/triber-chat-login/messages.html"></div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary block full-width m-b">Activate</button>
+
+		</form>
+	</div>
+</div>
