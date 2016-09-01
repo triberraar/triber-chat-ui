@@ -4,6 +4,7 @@ node_js:
 notifications:
   email: false
 install:
+- npm install
 - pip install --user codecov
 script:
 - npm run lint
