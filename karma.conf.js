@@ -13,7 +13,6 @@ var libFiles = [
     'src/lib/angular-bootstrap/ui-bootstrap-tpls.js',
     'src/lib/AngularJS-Toaster/toaster.js',
     'src/lib/angular-jwt/dist/angular-jwt.js',
-    'src/lib/oclazyload/dist/ocLazyLoad.js',
     'src/lib/ng-password-strength/dist/scripts/ng-password-strength.js',
     'src/lib/angular-recaptcha/release/angular-recaptcha.js',
     'src/lib/ladda/js/spin.js',
