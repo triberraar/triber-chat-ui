@@ -1,3 +1,3 @@
 #!/bin/bash
 set -ev
-zip -r release-$TRAVIS_TAG.zip node_modules dst proxy.js package.json
+zip -q -r release-$TRAVIS_TAG.zip node_modules dst proxy.js package.json
