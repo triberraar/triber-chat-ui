@@ -1,0 +1,28 @@
+<div>
+    <div ng-if="userResultCtrl.users().length > 0">
+        <table class="table table-hover" >
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Activated</th>
+                <th>Validated</th>
+                <th>Validate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in userResultCtrl.users()">
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td><span class=label ng-class="user.activated ? 'label-primary' : 'label-danger'"><i class="fa" ng-class="user.activated ? 'fa-check' : 'fa-times'"></i> {{user.activated ? 'Activated' : 'Not activated'}}</td>
+                <td><span class="label" ng-class="user.validated ? 'label-primary' : 'label-danger'"><i class="fa" ng-class="user.validated ? 'fa-check' : 'fa-times'"></i> {{user.validated ? 'Validated' : 'Not validated'}}</td>
+                <td><a ng-if="!user.validated" class="badge badge-primary" ng-click="userResultCtrl.validate(user)" ng-class="{disabled: userResultCtrl.validating}"><i ng-if="userResultCtrl.validating" class="fa fa-circle-o-notch fa-spin"></i> Validate</a></td>
+            </tr>
+            </tbody>
+        </table>
+                <span>
+                    <paging total-elements="userResultCtrl.totalElements" on-page-change="userResultCtrl.loadData()" current-page="userResultCtrl.currentPage" items-per-page="userResultCtrl.itemsPerPage"></paging>
+                </span>
+    </div>
+    <no-results render="userResultCtrl.users().length == 0"></no-results>
+</div>

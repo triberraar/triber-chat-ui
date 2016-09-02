@@ -1,0 +1,32 @@
+<form class="form-horizontal" ng-submit="userCriteriaCtrl.loadData()">
+    <div class="form-group">
+        <label class="col-sm-1 control-label">Username</label>
+        <div class="col-sm-2"><input type="text" class="form-control" ng-model="userCriteriaCtrl.username" ng-model-options="{ getterSetter: true}"></div>
+        <label class="col-sm-1 control-label">Email</label>
+        <div class="col-sm-2"><input type="text" class="form-control" ng-model="userCriteriaCtrl.email" ng-model-options="{ getterSetter: true}"></div>
+        <label  class="col-sm-1 control-label">Activated</label>
+        <div class="col-sm-1">
+            <select class="form-control " ng-model="userCriteriaCtrl.activated" ng-model-options="{getterSetter:true}">
+                <option value="">---</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+
+        <label  class="col-sm-1 control-label">Validated</label>
+        <!--<input type="checkbox" class="col-sm-2 js-switch" ui-switch checked ng-model="userCriteriaCtrl.validated" ng-model-options="{ getterSetter: true}"/>-->
+        <div class="col-sm-1">
+            <select class="form-control " ng-model="userCriteriaCtrl.validated" ng-model-options="{getterSetter:true}">
+                <option value="">---</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <div class="col-sm-1">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+        <div class="col-sm-1">
+            <button class="btn btn-default" ng-click="userCriteriaCtrl.clear()">Clear</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+.disabled {
+  cursor: not-allowed;
+}
+
+.chat-user {
+  padding: 10px 20px;
+}
+
+.home {
+	padding: 20px 30px
+}
+
+.chat-private {
+  z-index: 5;
+}

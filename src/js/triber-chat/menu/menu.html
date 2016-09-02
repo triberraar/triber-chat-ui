@@ -1,0 +1,36 @@
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+    	<div class="navbar-header home">
+    		<a ui-sref="chat.general"><i class="fa fa-home fa-2x"></i></a>
+    	</div>
+        <ul class="nav navbar-top-links navbar-right">
+        	<li ng-if="!menuCtrl.connected()"><a><i class="fa fa-circle-o-notch fa-spin"></i> Connecting</a></li>
+            <li uib-dropdown >
+                <a class="count-info" href uib-dropdown-toggle>
+                    <i class="fa fa-bell"></i> <span class="label label-primary">{{menuCtrl.numberOfNotifications()}}</span>
+                </a>
+                <ul class="dropdown-alerts" uib-dropdown-menu >
+                    <li ng-repeat="notification in menuCtrl.notifications()">
+                            <div ng-click="menuCtrl.goToNotification(notification)">
+                                <i ng-class="notification.cssClass"></i> {{notification.message}}
+                            </div>
+                    </li>
+
+                    <!--  <li class="divider" ng-if="menuCtrl.showAdmin() && menuCtrl.notification('unvalidatedUser')"></li>-->
+                    <li ng-if="menuCtrl.numberOfNotifications() === 0">
+                    	<a>
+                        	<div>
+                            	<i class=""></i> There are no notifications
+                        	</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a ng-click="menuCtrl.logout()">
+                    <i class="fa fa-sign-out"></i> Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,47 @@
+<div class="ibox-content">
+	<div class="row">
+		<connected-user></connected-user>
+
+		<div class="col-md-9 " scroll-bottom element-to-scroll="messages">
+			<div class="chat-discussion" id="messages">
+				<div ng-repeat="message in generalChatCtrl.messages()">
+					<div class="chat-message " ng-class-even="'left'"
+						ng-class-odd="'right'">
+						<div class="message">
+							<a class="message-author"> {{message.username}} </a> <span
+								class="message-date"> {{message.timestamp |
+								date:'d/M/yyyy H:mm:ss'}} </span> <span class="message-content">
+								{{message.content}} </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="chat-message-form">
+					<form class="form-horizontal" ng-submit="generalChatCtrl.say()"
+						name="generalChatCtrl.messageForm" novalidate>
+						<div class="col-sm-12"
+							ng-class="{ 'has-error' : generalChatCtrl.messageForm.message.$invalid && generalChatCtrl.messageForm.message.$dirty }">
+							<div class="input-group">
+								<input type="text" name="message" class="form-control"
+									ng-model="generalChatCtrl.content" ng-maxlength="2048">
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-primary"
+										ng-disabled="!generalChatCtrl.connected()">Say!</button>
+								</span>
+							</div>
+							<div class="help-block"
+								ng-messages="generalChatCtrl.messageForm.message.$error"
+								ng-if="generalChatCtrl.messageForm.message.$dirty">
+								<div ng-messages-include="js/triber-chat-login/messages.html"></div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

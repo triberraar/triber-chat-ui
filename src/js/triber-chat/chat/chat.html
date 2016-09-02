@@ -1,0 +1,19 @@
+<div class="wrapper wrapper-content animated fadeInRight" >
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox chat-view">
+            	<uib-tabset >
+                    <uib-tab  heading="General chat" ui-sref="chat.general" active="chatCtrl.generalActive">
+                    </uib-tab>
+                    <uib-tab  heading="Rooms" ui-sref="chat.room" active="chatCtrl.roomActive">
+                    </uib-tab>
+             	</uib-tabset>
+             	<div ui-view></div>
+            </div>
+        </div>
+    </div>
+    <private-chat></private-chat>
+</div>
+
+
+

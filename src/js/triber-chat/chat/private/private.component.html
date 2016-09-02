@@ -1,0 +1,34 @@
+<div class="small-chat-box ng-small-chat chat-private" ng-show="privateChatCtrl.shouldShow()">
+
+    <div class="heading" draggable="true">
+        <small class="chat-date pull-right" ng-click="privateChatCtrl.hide()">
+            X
+        </small>
+        {{privateChatCtrl.user().username}}
+    </div>
+
+    <div class="content" chat-slim-scroll>
+        <div id="private-messages">
+        <div ng-repeat="message in privateChatCtrl.messages()" ng-class="{'left': message.own, 'right': !message.own}" >
+            <div class="author-name">
+                {{message.from}} <small class="chat-date">{{message.timestamp |
+                date:'d/M/yyyy H:mm:ss'}}</small>
+            </div>
+            <div class="chat-message active">
+                {{message.content}}
+            </div>
+        </div>
+            </div>
+    </div>
+    <div class="form-chat">
+        <form ng-submit="privateChatCtrl.chat()">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" ng-model="privateChatCtrl.message">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit" >Send</button>
+                </span>
+            </div>
+        </form>
+    </div>
+
+</div>
