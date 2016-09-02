@@ -26,7 +26,7 @@ deploy:
   provider: releases
   api_key:
     secure: razJCpGHPMNyDFUbcsCZ/KlrxBCp8CSVJCpmlO5NUF3lhZC2Lutspevd7esYe11o0z3UwRKk8psQXKCusC1dlyVQB0VFzZGz/vjQzGml4Jo8WfO+VO4mj7kHB8ICPzvRTmASEgKKBoAsPzNj3hW6Qfn2zGmzEzq7Y9TIwprLKnxm9QNqG0niizmmt1YQrzeU3RI5uqQ+eGOil+RrMp9hXifLGj6EH2H5K9AHbsgCMH+UIOWcE5+5IoU7XUYMQZtznoNlkgIMQEsk55wITqpxgD+Qh70vLIKkp4Jf2wPgqxz+PFMVBp2HVrnLAnSLLP+lkPpgPgwRNhx22V1B2PSMeJOLk8wFUMsl44HZU3O4RUiEfrR31KhDXiv5kZKJU5O0ipoE5Qi6i3L+CzdeeRv0nGAlFAIGh5nBErTLQP8u2mONczX2jRCbQfPdKCrUMkMiNvfv4FhuTJfNSiehYcNjZWWYWbaoniS5l5k5Bapru05OxvLl3Cb4WMGsk4JU31VhQZlyb3nL2G0kKtdtBfsLDrs3rCQ1S0fZ7KhFN+PCooU0W2UjQLFxOr5Zv4ZdAeBoKqFUJhfVOK5XJ3UP2sDZQugsmekVTXdNSiHlNDzyjipi8wiG0AQp/58TbttrlvUieVljFcGKmPz4JTA+zJJfvaXY7lqanIE6p5bAr7vgeTM=
-  file: release.zip
+  file: release-${$TRAVIS_TAG}.zip
   skip_cleanup: true
   on:
     repo: triberraar/triber-chat-ui
