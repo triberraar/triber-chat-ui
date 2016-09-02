@@ -7,9 +7,9 @@ var path = require('path');
 var bunyan = require('bunyan');
 var logger = bunyan.createLogger({name: 'proxy'});
 
-var proxyHost = process.env.PROXY_HOST | 'localhost';
-var proxyPort = process.env.PROXY_PORT | '8080';
-var port = process.env.PORT | '3333';
+var proxyHost = process.env.PROXY_HOST || 'localhost';
+var proxyPort = process.env.PROXY_PORT || '8080';
+var port = process.env.PORT || '3333';
 
 var proxy = httpProxy.createProxyServer({
     target: 'http://' + proxyHost + ':' + proxyPort // where do we want to proxy to?
@@ -42,11 +42,11 @@ proxy.on( 'proxyReqWs', function ( proxyReqWs ) {
 
 app.all('/*',  function (req, res) {
     proxy.web(req, res, {target: {host: proxyHost, port:proxyPort}}, function (e, req, res) {
-        res.json({'message': 'proxy error'});
+        res.json({'message': 'proxy error', 'error': e});
     });
 });
 
 
 proxyServer.listen(port);
 
-logger.info({message: 'listening on ' + port});
+logger.info({message: 'listening on ' + port + '. Proxying ' + proxyHost + ':' + proxyPort});
