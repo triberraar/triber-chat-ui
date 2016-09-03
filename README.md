@@ -1,9 +1,9 @@
-# Triber-chat ui
+# Triber-chat ui [![Travis build status](https://img.shields.io/travis/triberraar/triber-chat-ui/develop.svg)](https://travis-ci.org/triberraar/triber-chat-ui)
 This is the frontend project related to [triber-chat](https://github.com/triberraar/triber-chat). It is written in javascript using the Angular 1.5 framework.
 
+[![bitHound Overalll Score](https://www.bithound.io/github/triberraar/triber-chat-ui/badges/score.svg?style=flat-square)](https://www.bithound.io/github/triberraar/triber-chat-ui)
 [![Coveralls test coverage](https://img.shields.io/coveralls/triberraar/triber-chat-ui/develop.svg)](https://coveralls.io/github/triberraar/triber-chat-ui?branch=develop)
 [![bitHound Code](https://www.bithound.io/github/triberraar/triber-chat-ui/badges/code.svg?style=flat-square)](https://www.bithound.io/github/triberraar/triber-chat-ui)
-[![bitHound Overalll Score](https://www.bithound.io/github/triberraar/triber-chat-ui/badges/score.svg?style=flat-square)](https://www.bithound.io/github/triberraar/triber-chat-ui)
 [![bitHound Dependencies](https://www.bithound.io/github/triberraar/triber-chat-ui/badges/dependencies.svg?style=flat-square)](https://www.bithound.io/github/triberraar/triber-chat-ui/develop/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/triberraar/triber-chat-ui/badges/devDependencies.svg?style=flat-square)](https://www.bithound.io/github/triberraar/triber-chat-ui/develop/dependencies/npm)
 
