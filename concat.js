@@ -26,6 +26,8 @@ if(!fs.existsSync('dst')) {
 }
 fs.writeFile('dst/triber-chat.min.js', result.code);
 fs.writeFile('dst/triber-chat.min.js.map', result.map.replace(/src/g, '../src'));
+fs.createReadStream('src/css/custom.css').pipe(fs.createWriteStream('dst/custom.css'));
+fs.createReadStream('src/css/style.css').pipe(fs.createWriteStream('dst/style.css'));
 
 /*eslint-disable*/
 console.log('done concat');
