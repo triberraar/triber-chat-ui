@@ -1,5 +1,6 @@
 # Triber-chat ui [![Travis build status](https://img.shields.io/travis/triberraar/triber-chat-ui/develop.svg)](https://travis-ci.org/triberraar/triber-chat-ui)
 
+[![Codacy code quality](https://img.shields.io/codacy/cedc27ce6a7c49119e27c9dbe9fccf6d/develop.svg)](https://www.codacy.com/app/geertolaerts/triber-chat-ui/dashboard)
 [![bitHound Overalll Score](https://www.bithound.io/github/triberraar/triber-chat-ui/badges/score.svg?style=flat-square)](https://www.bithound.io/github/triberraar/triber-chat-ui)
 [![Coveralls test coverage](https://img.shields.io/coveralls/triberraar/triber-chat-ui/develop.svg)](https://coveralls.io/github/triberraar/triber-chat-ui?branch=develop)
 [![bitHound Code](https://www.bithound.io/github/triberraar/triber-chat-ui/badges/code.svg?style=flat-square)](https://www.bithound.io/github/triberraar/triber-chat-ui)
