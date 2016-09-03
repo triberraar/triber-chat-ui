@@ -19,6 +19,8 @@ var proxy = httpProxy.createProxyServer({
 var app = express();
 app.use(express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname, 'dst')));
+app.use(express.static(__dirname));
+
 
 var proxyServer = http.createServer( app );
 
